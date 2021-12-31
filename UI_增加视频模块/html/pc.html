@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PC</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/animate.css" />
+    <!-- <script src="/html/js/fundb/vendor/modernizr-2.8.3.min.js?v=1"></script> -->
+    <script src="../js/jquery-1.8.3.min.js?v=1"></script>
+    <!-- <script src="../js/base.js?v=1"></script>
+    <script src="/html/js/fundb/vendor/baiduTemplate.min.js?v=1"></script>
+    <script src="/html/js/fundb/swiper-3.4.2.min.js?v=1"></script>
+    <script src="/html/js/fundb/plugins.js?v=1"></script>
+    <script src="/html/js/fundb/main.js?v=1"></script> -->
+    <style>
+
+        @media only screen and (max-width:1600px) {
+            .noticeMoney {
+                right: 10px;
+                left: auto !important;
+                margin-left: auto;
+            }
+        }
+
+        .noticeMoney {
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            margin-left: 550px;
+            z-index: 10;
+            -webkit-animation: noticeMoney 4s ease 0s infinite normal;
+            animation: noticeMoney 4s ease 0s infinite normal;
+        }
+
+        @-webkit-keyframes noticeMoney {
+            0% {
+                -webkit-transform: translate(0, 0px);
+            }
+
+            50% {
+                -webkit-transform: translate(0, -30px);
+            }
+            100% {
+                -webkit-transform: translate(0, 0px);
+            }
+        }
+
+        @keyframes noticeMoney {
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            50% {
+                transform: translate(0, -30px);
+            }
+            100% {
+                transform: translate(0, 0px);
+            }
+        }
+    </style>
+	<style>
+		.page10{
+			-webkit-animation-delay: 0.1s;
+		}
+	</style>
+	</head>
+	<body>
+    	<a href="javascript:void(0)" onclick="javascript:window.history.go(-1);" class="lmenu"><img src="../img/notice.png" class="noticeMoney"></a>
+		<section class="page page6 animated bounceInLeft">
+			<span><img src="../img/pc_01.png"></span>
+			<span><img src="../img/pc_02.png"></span>
+			<span><img src="../img/pc_03.png"></span>
+			<span><img src="../img/pc_04.png"></span>
+			<span><img src="../img/pc_05.png"></span>
+			<span><img src="../img/pc_06.png"></span>
+			<!-- <span><img src="../img/pc_07.png"></span> -->
+
+            <div style="width: 100%;text-align: center;">
+                <video style="width: 500px;" id="videoID" controls="controls" >
+                  <source src="../img/video.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div style="width: 100%;text-align: center;">
+                <video style="width: 500px;" id="videoID1" controls="controls" >
+                  <source src="../img/video.mp4" type="video/mp4" />
+                </video>
+
+                <video style="width: 500px;" id="videoID2" controls="controls" >
+                  <source src="../img/video.mp4" type="video/mp4" />
+                </video>
+            </div>
+			<span><img src="../img/pc_08.png"></span>
+			<span><img src="../img/pc_09.png"></span>	
+		</section>
+
+        <script type="text/javascript">
+        window.onload = function() {
+            function videoPlay(id){
+                var local1=document.getElementById(id); 
+                //获取，函数执行完成后local内存释放
+                local1.autoplay = true; // 自动播放
+                local1.loop = true; // 循环播放
+                local1.muted=true; // 关闭声音，如果为false,视频无法自动播放
+                if(local1.paused){  //判断是否处于暂停状态
+                    local1.play();  //开启播放
+                }else{         
+                    local1.pause();  //停止播放
+                }
+            }
+            videoPlay('videoID')
+
+            videoPlay('videoID1')
+
+            videoPlay('videoID2')
+        }
+        </script>
+	</body>
+</html>
